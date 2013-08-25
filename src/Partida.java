@@ -14,7 +14,7 @@ public final  class Partida {
  protected String[] jugador;
  protected String nivel;
  protected int numeroPartida;
- protected String mapa[][];
+ protected String mapa_J[][];
 
 public Partida(String nivel,int numPartida  ){
    jugador=new String[1];
