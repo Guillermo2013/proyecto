@@ -14,13 +14,14 @@ public final  class Partida {
  protected String[] jugador;
  protected String nivel;
  protected int numeroPartida;
- protected String mapa_J[][];
-
+ protected String mapa_jugador1[][];
+protected String mapa_jugador2[][];
 public Partida(String nivel,int numPartida  ){
    jugador=new String[1];
    this.nivel=nivel;
    numeroPartida=numPartida;
-   mapa=new String [8][8];
+   mapa_jugador1=new String [8][8];
+   mapa_jugador2=new String [8][8];
 }
 
         
