@@ -25,7 +25,8 @@ Scanner sc =new Scanner (System.in);
  Random rd=new Random();
  Partida pd =new Partida("",0);
 
-   public void setPosicionJugador1(int x,int y){   
+   
+ public void setPosicionJugador1(int x,int y){   
        if(x>=0&&x<8&&y<8&&y>0){ 
        switch (pd.mapa_jugador1[x][y]) {
             case "SM":
@@ -44,7 +45,8 @@ Scanner sc =new Scanner (System.in);
        }
        System.out.println("Las coordenadas estan fuera de limite");
    }
-       public void setPosicionJugador2(int x,int y){   
+   
+   public void setPosicionJugador2(int x,int y){   
        if(x>=0&&x<8&&y<8&&y>0){ 
        switch (pd.mapa_jugador2[x][y]) {
             case "SM":
@@ -74,8 +76,8 @@ Scanner sc =new Scanner (System.in);
        System.out.print("Haz destruido un destructor");
        } 
         
-   @Override
-       public void golpeJugador2 (int x,int y){
+        
+   public void golpeJugador2 (int x,int y){
         if (cantBombas>0){
            if (pd.mapa_jugador2[x][y].equals(codigo)){
                    cantBombas-=1;
@@ -85,7 +87,8 @@ Scanner sc =new Scanner (System.in);
        }else
        System.out.print("Haz destruido un destructor");
        } 
-       public void cambiarPosicionJugado1(){
+   
+   public void cambiarPosicionJugado1(){
        for(int x=0;x<8;x++){
            for(int y=0;y<8;y++){
               if(pd.mapa_jugador2[x][y].equals(codigo))
@@ -98,7 +101,8 @@ Scanner sc =new Scanner (System.in);
        setPosicionJugador1(x, y);
        
        }
-       public void cambiarPosicionJugado2(){
+   
+   public void cambiarPosicionJugado2(){
        for(int x=0;x<8;x++){
            for(int y=0;y<8;y++){
               if(pd.mapa_jugador2[x][y].equals(codigo))
