@@ -1,4 +1,5 @@
 
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,11 +13,12 @@ import java.util.Scanner;
  *
  * @author Guillermo Sandoval
  */
-public class PortaAviones {
+public class PortaAviones extends PadreBarco{
    protected int cantBombas;
     public static final String codigo="PA";
 
     public PortaAviones() {
+        super(0,0);
         cantBombas = 5;
     }
     
@@ -55,7 +57,13 @@ Scanner sc =new Scanner (System.in);
        } 
 
        public void cambiarPosicion(){
-       
+       for(int x=0;x<8;x++){
+           for(int y=0;y<8;y++){
+              if(pd.mapa[x][y].equals(codigo))
+                  pd.mapa[x][y]="";
+            }
+           
+       }    
        int x=rd.nextInt(0)+7;
        int y=rd.nextInt(0)+7;          
        setPosicion(x, y);

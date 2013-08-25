@@ -14,23 +14,26 @@ public final  class Partida {
  protected String[] jugador;
  protected String nivel;
  protected int numeroPartida;
- protected String mapa[][];
+ protected String mapa_jugador1[][];
+protected String mapa_jugador2[][];
 
 public Partida(String nivel,int numPartida  ){
-   jugador=new String[1];
+   jugador=new String[2];
    this.nivel=nivel;
    numeroPartida=numPartida;
-   mapa=new String [8][8];
+   mapa_jugador1=new String [8][8];
+   mapa_jugador2=new String[8][8];
 }
 
         
     public void agregarJugadores(){
-        for (int x=0;x<1;x++){
+        for (int x=0;x<=1;x++){
             Scanner sc=new Scanner(System.in);
-            System.out.println("ingrese JUGADO"+(x+1));
+            System.out.println("ingrese JUGADO-"+(x+1));
             jugador[x]=sc.next();
+            
         }
-        
+       
     }
      
               
@@ -40,6 +43,7 @@ public Partida(String nivel,int numPartida  ){
     }
 
     public void setNivel(String nivel) {
+        
         this.nivel = nivel;
     }
 
@@ -51,7 +55,7 @@ public Partida(String nivel,int numPartida  ){
         this.numeroPartida = numeroPartida;
     }
     
-    public void dibujarmap(int fila , int colummas){
+    public void dibujarmap(){
        for (int x=0;x<8;x++){
            for (int y=0;y<8;y++){
               System.out.print("~");
@@ -59,5 +63,9 @@ public Partida(String nivel,int numPartida  ){
         System.out.println("");
        }
     }
+
+    
+    
   
+ 
 }

@@ -11,11 +11,12 @@ import java.util.Random;
  * @author Guillermo Sandoval
  */
 
-public class Acorazado {
+public class Acorazado extends PadreBarco {
     protected int cantBombas;
     public static final String codigo="AZ";
     
     public Acorazado(){
+        super(0,0);
      cantBombas=4;
      
         
@@ -53,7 +54,13 @@ Scanner sc =new Scanner (System.in);
        } 
 
        public void cambiarPosicion(){
-       
+       for(int x=0;x<8;x++){
+           for(int y=0;y<8;y++){
+              if(pd.mapa[x][y].equals(codigo))
+                  pd.mapa[x][y]="";
+            }
+           
+       }    
        int x=rd.nextInt(0)+7;
        int y=rd.nextInt(0)+7;          
        setPosicion(x, y);
